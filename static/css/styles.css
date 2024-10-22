@@ -279,9 +279,10 @@ body{
 
 
 .footer-content {
+    width: 90%;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
     margin-bottom: 0;
 }
 
@@ -440,7 +441,7 @@ body{
     } 
 
     .subtitle{
-        font-size: 1.8rem;
+        font-size: 1.7rem;
     }
 
 
@@ -451,6 +452,7 @@ body{
 
     .footer-content {
         flex-direction: column;
+        margin-left: 60px;
         gap: 2rem;
     }
 
