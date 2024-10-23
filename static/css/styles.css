@@ -287,6 +287,13 @@ body{
     border-width: 0;
 }
 
+.footer__link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
 .footer-bottom {
     padding-top: 1rem;
     text-align: center;
