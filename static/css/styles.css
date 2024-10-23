@@ -9,6 +9,20 @@ body{
     font-family: sans-serif;
 }
 
+.logo {
+    font-family: Arial;
+    position: relative;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: linear-gradient(45deg, #e7e9eb, #d6e4f0 50%, #2091F9 50%, #2091F9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 200%;
+    animation: gradientAnimation 5s ease infinite;
+}
+
 .container{
     width: 90%;
     max-width: 1200px;
@@ -315,6 +329,7 @@ body{
     .nav__link--menu{
         position: fixed;
         background-color: #000000f0;
+        font-size: 1.2rem;
         top: 0;
         left: 0;
         height: 100%;
@@ -407,6 +422,18 @@ body{
         margin-top: 20px;
     }
 
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 ::-webkit-scrollbar{
