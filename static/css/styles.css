@@ -291,7 +291,6 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
 }
 
 .footer-bottom {
@@ -315,7 +314,7 @@ body{
 
     .nav__link--menu{
         position: fixed;
-        background-color: #000000cf;
+        background-color: #000000f0;
         top: 0;
         left: 0;
         height: 100%;
