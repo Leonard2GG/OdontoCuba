@@ -16,7 +16,7 @@ body{
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 2px;
-    background: linear-gradient(45deg, #e7e9eb, #d6e4f0 50%, #2091F9 50%, #2091F9);
+    background: linear-gradient(45deg, #e7e9eb, #d6e4f0 50%, #7d7c7c 50%, #7d7c7c);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-size: 200% 200%;
@@ -160,6 +160,7 @@ body{
 .services{
     text-align: center;
 }
+
 
 .services-grid {
     display: flex;
