@@ -93,6 +93,17 @@ body {
     text-decoration: none;
 }
 
+.nav__links {
+    transition: color 0.18s ease, transform 0.12s ease;
+}
+
+.nav__links:hover,
+.nav__links:focus {
+    color: var(--primary-color);
+    transform: translateY(-2px);
+    outline: none;
+}
+
 .nav__menu {
     margin-left: auto;
     cursor: pointer;
@@ -220,6 +231,23 @@ button:focus {
     outline-offset: 2px;
 }
 
+/* small reveal animation used when navigating via menu */
+.reveal {
+    animation: fadeInUp 420ms cubic-bezier(.2, .8, .2, 1) both;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .about__icons {
     display: grid;
     gap: 1em;
@@ -282,13 +310,15 @@ button:focus {
 .testimony__body {
     flex: 0 0 100%;
     width: 100%;
-    padding: 20px;
+    padding: 2.5rem 1.25rem;
+    /* más espacio alrededor */
     box-sizing: border-box;
     display: grid;
     grid-template-columns: 1fr max-content;
     justify-content: space-between;
     align-items: center;
-    gap: 2em;
+    gap: 3rem;
+    /* separación entre texto e imagen */
 }
 
 .testimony__dots {
@@ -317,6 +347,11 @@ button:focus {
     border-radius: 50%;
     object-fit: cover;
     object-position: 50% 30%;
+}
+
+.testimony__img {
+    margin-left: 1rem;
+    /* separación adicional para evitar que se "peguen" */
 }
 
 .testimony__texts {
@@ -517,6 +552,10 @@ button:focus {
 
     .renglon {
         margin-top: 20px;
+    }
+
+    .social-icons {
+        justify-content: start;
     }
 
 }
