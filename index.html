@@ -17,9 +17,30 @@
     <link rel="stylesheet" href="./static/css/normalize_css.css">
     <link rel="stylesheet" href="./static/css/styles.css">
     <title>OdontoCuba</title>
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Dentist",
+            "name": "OdontoCuba",
+            "url": "https://leonard2gg.github.io/OdontoCuba/",
+            "telephone": "+593987486671",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Quito",
+                "addressRegion": "Pichincha",
+                "streetAddress": "Las Delicias, La Ecuatoriana"
+            },
+            "openingHours": "Mo,Tu,We,Th,Fr 09:00-18:00",
+            "sameAs": [
+                "https://www.facebook.com/profile.php?id=100093602260931",
+                "https://www.instagram.com/odon_tocuba"
+            ]
+        }
+        </script>
 </head>
 
 <body>
+    <a class="skip-link" href="#main-content">Saltar al contenido</a>
     <header class="header" id="header">
 
         <nav class="nav container">
@@ -52,12 +73,13 @@
                 Bienvenido a OdontoCuba, donde cuidamos tu sonrisa
             </p>
             <div class="contact-us">
-                <a class="contact" href="https://wa.link/x83h6r">Contáctanos</a>
+                <a class="contact" href="tel:+593987486671">Llamar</a>
+                <a class="contact" href="https://wa.link/x83h6r">WhatsApp</a>
             </div>
         </section>
     </header>
 
-    <main>
+    <main id="main-content">
         <section class="container about__us" id="about__us">
             <h2 class="subtitle">¿Qué es OdontoCuba?</h2>
             <p class="about__paragraph">Odontocuba es una clínica dental que se distingue por su equipo de profesionales
@@ -141,38 +163,46 @@
             <div class="testimony__container container">
                 <div class="testimony__slider">
                     <section class="testimony__body" data-id="1">
-                        <div class="testimony__texts">
+                        <div class="testimony__texts" aria-live="polite">
                             <h2 class="subtitle">Polet Collaguazo</h2>
                             <p class="testimony__review">Odontocuba es, sin duda, la mejor clínica dental en la que he
                                 estado. Los dentistas cubanos son increíblemente amables y profesionales. Recibí un
-                                tratamiento de endodoncia y todo el proceso fue suave y sin dolor. ¡Muy recomendable!</p>
+                                tratamiento de endodoncia y todo el proceso fue suave y sin dolor. ¡Muy recomendable!
+                            </p>
                         </div>
                         <figure class="testimony__picture">
-                            <img src="./static/img/Person__one.jpg" class="testimony__img" alt="Person">
+                            <img src="./static/img/Person__one.jpg" class="testimony__img" alt="Polet Collaguazo"
+                                loading="lazy" width="250" height="250">
                         </figure>
                     </section>
 
                     <section class="testimony__body" data-id="2">
-                        <div class="testimony__texts">
+                        <div class="testimony__texts" aria-live="polite">
                             <h2 class="subtitle">Diego Usiña</h2>
-                            <p class="testimony__review">Tenía un problema con una muela y decidí ir a Odontocuba. Desde el
-                                momento en que entré, me sentí bienvenido. El equipo es muy profesional y utilizan la última
+                            <p class="testimony__review">Tenía un problema con una muela y decidí ir a Odontocuba. Desde
+                                el
+                                momento en que entré, me sentí bienvenido. El equipo es muy profesional y utilizan la
+                                última
                                 tecnología. Mi problema fue resuelto rápidamente. ¡Cinco estrellas!</p>
                         </div>
                         <figure class="testimony__picture">
-                            <img src="./static/img/Person__two.jpg" class="testimony__img" alt="Person">
+                            <img src="./static/img/Person__two.jpg" class="testimony__img" alt="Diego Usiña"
+                                loading="lazy" width="250" height="250">
                         </figure>
                     </section>
 
                     <section class="testimony__body" data-id="3">
-                        <div class="testimony__texts">
+                        <div class="testimony__texts" aria-live="polite">
                             <h2 class="subtitle">Vanessa Chugchilan</h2>
-                            <p class="testimony__review">Si buscas una clínica dental de confianza, Odontocuba es la mejor
-                                opción. Me hice un blanqueamiento dental y los resultados fueron increíbles. El ambiente es
+                            <p class="testimony__review">Si buscas una clínica dental de confianza, Odontocuba es la
+                                mejor
+                                opción. Me hice un blanqueamiento dental y los resultados fueron increíbles. El ambiente
+                                es
                                 acogedor y los dentistas son muy atentos. Definitivamente regresaré.</p>
                         </div>
                         <figure class="testimony__picture">
-                            <img src="./static/img/Person__three.jpg" class="testimony__img" alt="Person">
+                            <img src="./static/img/Person__three.jpg" class="testimony__img" alt="Vanessa Chugchilan"
+                                loading="lazy" width="250" height="250">
                         </figure>
                     </section>
                 </div>
@@ -189,21 +219,24 @@
                             <li>
                                 <a href="https://maps.app.goo.gl/G9B4v5C7ZLvoQXns7" target="_blank"
                                     rel="noopener noreferrer" class="footer__link">
-                                    <img src="./static/img/map.svg" class="footer__img" alt="map">
+                                    <img src="./static/img/map.svg" class="footer__img" alt="map" loading="lazy"
+                                        width="24" height="24">
                                     <span>Odontocuba, Las Delicicias. La Ecuatoriona y Quito</span>
                                 </a>
                             </li>
                             <li>
                                 <a href="https://wa.link/x83h6r" target="_blank" rel="noopener noreferrer"
                                     class="footer__link">
-                                    <img src="./static/img/whatsapp.svg" class="footer__img" alt="whatsapp">
+                                    <img src="./static/img/whatsapp.svg" class="footer__img" alt="whatsapp"
+                                        loading="lazy" width="24" height="24">
                                     <span>+593 98 7486671</span>
                                 </a>
                             </li>
                             <li>
                                 <a href="mailto:odontocuba0@gmail.com" target="_blank" rel="noopener noreferrer"
                                     class="footer__link">
-                                    <img src="./static/img/mail.svg" class="footer__img" alt="mail">
+                                    <img src="./static/img/mail.svg" class="footer__img" alt="mail" loading="lazy"
+                                        width="24" height="24">
                                     <span>odontocuba0@gmail.com</span>
                                 </a>
                             </li>
@@ -214,12 +247,14 @@
                         <div class="social-icons">
                             <a href="https://www.facebook.com/profile.php?id=100093602260931" target="_blank"
                                 rel="noopener noreferrer">
-                                <img src="./static/img/facebook.svg" class="footer__img" alt="facebook">
+                                <img src="./static/img/facebook.svg" class="footer__img" alt="facebook" loading="lazy"
+                                    width="24" height="24">
                                 <span class="sr-only">Facebook</span>
                             </a>
                             <a href="https://www.instagram.com/odon_tocuba?igsh=azRla2xhMTUycG5n" target="_blank"
                                 rel="noopener noreferrer">
-                                <img src="./static/img/instagram-alt.svg" class="footer__img" alt="instagram-alt">
+                                <img src="./static/img/instagram-alt.svg" class="footer__img" alt="instagram-alt"
+                                    loading="lazy" width="24" height="24">
                                 <span class="sr-only">Instagram</span>
                             </a>
                         </div>

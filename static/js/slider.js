@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const totalSlides = slides.length;
     let currentIndex = 0;
     let intervalId;
-
     // Create dots
     if (dotsContainer) {
         for (let i = 0; i < totalSlides; i++) {

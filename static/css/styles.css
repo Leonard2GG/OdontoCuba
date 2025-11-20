@@ -1,6 +1,11 @@
 :root {
     --padding-container: 100px 0;
     --color-title: #001A49;
+    --primary-color: #3498db;
+    --accent-color: #0077cc;
+    --primary-foreground: #001A49;
+    --background: #ffffff;
+    --text-muted: #6b7280;
 }
 
 html {
@@ -19,6 +24,7 @@ body {
     text-transform: uppercase;
     letter-spacing: 2px;
     background: linear-gradient(45deg, #e7e9eb, #d6e4f0 50%, #7d7c7c 50%, #7d7c7c);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-size: 200% 200%;
@@ -136,7 +142,8 @@ body {
     display: flex;
     background-color: white;
     border-radius: 5rem;
-    width: 120px;
+    padding: 0.6rem 1.2rem;
+    min-width: 120px;
     height: 40px;
     text-decoration: none;
     text-align: center;
@@ -153,6 +160,10 @@ body {
     background-color: #3498db;
     transform: translateY(-3px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.contact-us .contact {
+    margin: 0 0.5rem;
 }
 
 
@@ -175,9 +186,38 @@ body {
     display: grid;
     width: 90%;
     margin: 0 auto;
-    gap: 1m;
+    gap: 1rem;
     overflow: hidden;
     grid-template-columns: repeat(auto-fit, minmax(260px, auto));
+}
+
+/* Accessibility helpers */
+.skip-link {
+    position: absolute;
+    left: -999px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.skip-link:focus {
+    left: 10px;
+    top: 10px;
+    width: auto;
+    height: auto;
+    background: #fff;
+    padding: 8px 12px;
+    z-index: 9999;
+    color: var(--primary-foreground);
+    border-radius: 4px;
+}
+
+/* Visible focus outlines for keyboard users */
+a:focus,
+button:focus {
+    outline: 3px solid rgba(52, 152, 219, 0.45);
+    outline-offset: 2px;
 }
 
 .about__icons {
