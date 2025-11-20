@@ -190,6 +190,8 @@ body {
 
 .about__paragraph {
     line-height: 1.7;
+    text-align: start;
+    margin-left: 1.25rem;
 }
 
 .about__main {
