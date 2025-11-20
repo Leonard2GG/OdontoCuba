@@ -1,29 +1,65 @@
-const sliders = [...document.querySelectorAll('.testimony__body')];
-let value;
-let intervalId;
+document.addEventListener('DOMContentLoaded', () => {
+    const slider = document.querySelector('.testimony__slider');
+    const slides = document.querySelectorAll('.testimony__body');
+    const dotsContainer = document.querySelector('.testimony__dots');
+    const totalSlides = slides.length;
+    let currentIndex = 0;
+    let intervalId;
 
-// Función para cambiar la posición del slider
-function changePosition(add) {
-    const currentTestimony = document.querySelector('.testimony__body--show').dataset.id;
-    value = Number(currentTestimony);
-    value += add;
+    // Create dots
+    if (dotsContainer) {
+        for (let i = 0; i < totalSlides; i++) {
+            const dot = document.createElement('span');
+            dot.classList.add('dot');
+            dot.dataset.slide = i;
+            dotsContainer.appendChild(dot);
+        }
 
-    sliders[Number(currentTestimony)-1].classList.remove('testimony__body--show');
+        const dots = document.querySelectorAll('.dot');
+        if (dots.length > 0) {
+            dots[0].classList.add('dot--active');
 
-    if(value === sliders.length + 1 || value === 0){
-        value = value === 0 ? sliders.length : 1;
+            dots.forEach(dot => {
+                dot.addEventListener('click', (e) => {
+                    const slideIndex = parseInt(e.target.dataset.slide);
+                    goToSlide(slideIndex);
+                    resetAutoPlay();
+                });
+            });
+        }
     }
-    
-    sliders[value-1].classList.add('testimony__body--show');
-}
 
-// Función para iniciar el slider automático
-function startAutoPlay() {
-    intervalId = setInterval(() => {
-        changePosition(1);
-    }, 5000); // Cambia esto según lo que desees (en milisegundos)
-}
+    function updateDots(index) {
+        const dots = document.querySelectorAll('.dot');
+        if (dots.length > 0) {
+            dots.forEach(dot => dot.classList.remove('dot--active'));
+            dots[index].classList.add('dot--active');
+        }
+    }
 
-// Inicia el autoplay al cargar la página
-document.addEventListener('DOMContentLoaded', startAutoPlay);
+    function goToSlide(index) {
+        if (slider) {
+            slider.style.transform = `translateX(-${index * 100}%)`;
+            currentIndex = index;
+            updateDots(index);
+        }
+    }
 
+    function nextSlide() {
+        let nextIndex = (currentIndex + 1) % totalSlides;
+        goToSlide(nextIndex);
+    }
+
+    function startAutoPlay() {
+        intervalId = setInterval(nextSlide, 5000); // 5 seconds
+    }
+
+    function resetAutoPlay() {
+        clearInterval(intervalId);
+        startAutoPlay();
+    }
+
+    if (slider && slides.length > 0) {
+        startAutoPlay();
+    }
+});
